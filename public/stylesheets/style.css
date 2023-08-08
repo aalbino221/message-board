@@ -1,8 +1,92 @@
 body {
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font: 14px 'Lucida Grande', Helvetica, Arial, sans-serif;
 }
 
 a {
-  color: #00B7FF;
+  color: #00b7ff;
+}
+
+.index-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  margin: 0;
+}
+
+.index-header > button,
+.btn {
+  background-color: rgb(241, 241, 241);
+  border: 1px solid rgba(128, 128, 128, 0.555);
+  border-radius: 2px;
+  padding: 5px 15px;
+}
+
+.index-header > button > a,
+.btn > a {
+  color: black;
+  text-decoration: none;
+}
+
+.index-messages {
+  width: 40%;
+  display: flex;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.index-messages > ul {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+}
+
+.index-messages > ul > li {
+  border: 1px solid rgba(128, 128, 128, 0.555);
+  padding: 0.4rem 0.6rem;
+  margin-bottom: 1rem;
+}
+
+.index-messages > ul > li > p > span {
+  font-size: 0.7rem;
+  color: rgba(0, 0, 0, 0.733);
+  font-weight: 500;
+}
+
+.index-messages > ul > li > p:nth-child(1) {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.new-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid rgba(128, 128, 128, 0.555);
+  padding: 1rem;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+form {
+  width: min(100%, 708px);
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+input {
+  border: 1px solid rgba(128, 128, 128, 0.555);
+  border-radius: 2px;
+  padding: 5px 15px;
 }

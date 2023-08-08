@@ -2,10 +2,28 @@
 <html>
   <head>
     <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link
+      rel="stylesheet"
+      href="/stylesheets/style.css"
+    />
   </head>
   <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
+    <div class="index-header">
+      <h1><%= title %></h1>
+      <p>Welcome to <%= title %>!</p>
+      <button>
+        <a href="/new">New Message</a>
+      </button>
+    </div>
+    <div class="index-messages">
+      <ul>
+        <% for(let i = 0; i < messages.length; i++ ) { %>
+        <li>
+          <p><%= messages[i].user %> <span>(<%= messages[i].added %>)</span></p>
+          <p><%= messages[i].text %></p>
+        </li>
+        <% } %>
+      </ul>
+    </div>
   </body>
 </html>

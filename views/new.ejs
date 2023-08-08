@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link
+      rel="stylesheet"
+      href="/stylesheets/style.css"
+    />
+  </head>
+  <body>
+    <div class="new-header">
+      <h1>Send a message:</h1>
+      <form
+        action="/new"
+        method="post"
+      >
+        <div class="field">
+          <label for="name">Your name:</label>
+          <input
+            type="text"
+            name="name"
+            id="name"
+          />
+        </div>
+        <div class="field">
+          <label for="text">Your message:</label>
+          <input
+            type="text"
+            name="text"
+            id="text"
+          />
+        </div>
+        <div class="buttons">
+          <button class="btn">
+            <a href="/">Go Back</a>
+          </button>
+          <input
+            type="submit"
+            value="Submit"
+            class="btn"
+          />
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
