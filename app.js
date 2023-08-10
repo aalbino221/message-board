@@ -2,6 +2,7 @@ require('dotenv').config();
 
 const createError = require('http-errors');
 const express = require('express');
+const http = require('http');
 const mongoose = require('mongoose');
 
 mongoose.set('strictQuery', false);
@@ -49,6 +50,13 @@ app.use(function (err, req, res, next) {
   // render the error page
   res.status(err.status || 500);
   res.render('error');
+});
+
+const port = process.env.PORT || 5000;
+const server = http.createServer(app);
+
+server.listen(port, () => {
+  console.log(`Server started on port:${port}`);
 });
 
 module.exports = app;
